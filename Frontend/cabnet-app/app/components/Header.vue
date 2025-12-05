@@ -34,7 +34,9 @@ const isContrastPage = computed(
     route.path === "/hours-and-location" ||
     route.name === "hours-and-location" ||
     route.path === "/about" ||
-    route.name === "about"
+    route.name === "about" ||
+    route.path === "/collections" ||
+    route.name === "collections"
 );
 
 // text color: force black on the hours page, otherwise white at top and black when scrolled
@@ -44,8 +46,8 @@ const textClass = computed(() => {
 });
 
 // Config: adjust to taste
-const HIDE_DISTANCE = 300; // only start hiding after you've scrolled this far from top
-const DELTA_DOWN = 10; // scroll down this much to trigger hide
+const HIDE_DISTANCE = 100; // only start hiding after you've scrolled this far from top
+const DELTA_DOWN = 3; // scroll down this much to trigger hide
 const DELTA_UP = 10; // scroll up this much to trigger show
 const SCROLL_BG_THRESHOLD = 10; // when to switch from transparent -> colored
 
