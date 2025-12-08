@@ -18,11 +18,24 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/scripts'],
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/scripts', '@nuxtjs/i18n'],
   css: ['@/assets/css/main.css'],
   vite: {
     plugins : [
       tailwindcss(),
+    ],
+  },
+  i18n: {
+    strategy: 'prefix',
+    defaultLocale: 'zh',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    },
+    locales: [
+      { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' },
+      { code: 'zh', iso: 'zh-CN', name: '中文', file: 'zh.json' },
     ],
   },
 })

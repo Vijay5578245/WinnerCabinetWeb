@@ -14,11 +14,11 @@
     <nuxt-link to="/" class="text-lg font-bold"> Winner Cabinets </nuxt-link>
 
     <ul class="flex space-x-6 ml-6">
-      <li><NuxtLink to="/about">About</NuxtLink></li>
-      <li><NuxtLink to="/Collections">Collection</NuxtLink></li>
+      <li><NuxtLink to="/about">{{$t("header.about")}}</NuxtLink></li>
+      <li><NuxtLink to="/collections">{{$t("header.collections")}}</NuxtLink></li>
     </ul>
   </div>
-</template>
+</template>s
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, computed } from "vue";
@@ -26,17 +26,25 @@ import { useRoute } from "vue-router";
 
 const hidden = ref(false);
 const scrolled = ref(false);
+const localePath = useLocalePath()
 
 const route = useRoute();
 // detect the hours page by path or name (adjust if your route name differs)
+
+const contrastPages = [
+  "/hours-and-location",
+  "hours-and-location",
+  "/about",
+  "about",
+  "/collections",
+  "collections",
+];
+
 const isContrastPage = computed(
-  () =>
-    route.path === "/hours-and-location" ||
-    route.name === "hours-and-location" ||
-    route.path === "/about" ||
-    route.name === "about" ||
-    route.path === "/collections" ||
-    route.name === "collections"
+  () => {
+    // 3. Check if the current path matches the localized path of any page in the list
+  return contrastPages.some(page => route.path === localePath(page))
+}
 );
 
 // text color: force black on the hours page, otherwise white at top and black when scrolled
