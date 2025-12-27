@@ -28,6 +28,7 @@ const hidden = ref(false);
 const scrolled = ref(false);
 const localePath = useLocalePath()
 
+
 const route = useRoute();
 // detect the hours page by path or name (adjust if your route name differs)
 
@@ -56,7 +57,7 @@ const textClass = computed(() => {
 // Config: adjust to taste
 const HIDE_DISTANCE = 100; // only start hiding after you've scrolled this far from top
 const DELTA_DOWN = 3; // scroll down this much to trigger hide
-const DELTA_UP = 10; // scroll up this much to trigger show
+const DELTA_UP = 5; // scroll up this much to trigger show
 const SCROLL_BG_THRESHOLD = 10; // when to switch from transparent -> colored
 
 let lastY = 0;
