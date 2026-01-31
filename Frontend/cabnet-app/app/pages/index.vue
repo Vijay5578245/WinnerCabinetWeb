@@ -1,28 +1,11 @@
 <template>
 
-
-  <!-- Hero / fullscreen video header (accounts for fixed header with pt-24) -->
   <section class="relative h-screen pt-24 overflow-hidden">
-    <!-- Background video (decorative) -->
-    <video
-      class="absolute inset-0 w-full h-full object-cover"
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="metadata"
-      poster=""
-      aria-hidden="true"
-      tabindex="-1"
-    >
-      <source src="/videos/testVid.mp4" type="video/mp4" />
-      <source src="/videos/testVid.mp4" type="video/webm" />
-      <!-- fallback image will be used if video unsupported -->
-    </video>
+<img class="bg-gray-100 absolute w-full h-full z-10 top-1/3 left-1/2 -translate-x-1/2" src="/images/nvTest.jpg"/>
 
     <!-- dim / color overlay for better text contrast -->
     <div
-      class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/40"
+      class="h-auto absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/40"
     ></div>
 
     <!-- centered content -->
@@ -79,11 +62,12 @@
                   Starting from $2100
                 </p>
 
-                <button
-                  class="mt-6 inline-flex items-center rounded-full border border-black/25 px-5 py-2 text-sm text-black/80 transition group-hover:border-black/40"
+                <NuxtLink
+                  to="/measurement-services"
+                  class="mt-6 inline-flex items-center rounded-full border border-black/25 px-5 py-2 text-sm text-black/80 transition hover:border-black/70"
                 >
                   Learn More
-                </button>
+                </NuxtLink>
               </div>
             </div>
 
@@ -106,11 +90,12 @@
                   Starting from $1499
                 </p>
 
-                <button
-                  class="mt-6 inline-flex items-center rounded-full border border-black/25 px-5 py-2 text-sm text-black/80 transition group-hover:border-black/40"
+                <NuxtLink
+                  to="/measurement-services"
+                  class="mt-6 inline-flex items-center rounded-full border border-black/25 px-5 py-2 text-sm text-black/80 transition hover:border-black/70"
                 >
                   Learn More
-                </button>
+                </NuxtLink>
               </div>
             </div>
           </div>
@@ -120,7 +105,7 @@
             <!-- Small card -->
 
             <div class="relative p-10 overflow-hidden h-[40vh]">
-              <div class="absolute inset-0 z-0">
+              <div class="absolute right-0 inset-y-0 z-0 w-[550px]">
                 <img
                   src="/images/pencilPic.jpg"
                   alt=""
@@ -135,11 +120,12 @@
                   Starting from $1200
                 </p>
 
-                <button
-                  class="mt-6 inline-flex items-center rounded-full border border-black/25 px-5 py-2 text-sm text-black/80 transition group-hover:border-black/40"
+                <NuxtLink
+                  to="/measurement-services"
+                  class="mt-6 inline-flex items-center rounded-full border border-black/25 px-5 py-2 text-sm text-black/80 transition hover:border-black/70"
                 >
                   Learn More
-                </button>
+                </NuxtLink>
 
                 <p class="mt-8 text-xs text-black/50">*Minimum 3 months commitment</p>
               </div>
@@ -148,7 +134,7 @@
             <!-- Big card -->
 
             <div class="relative p-10 overflow-hidden h-[60vh]">
-              <div class="absolute inset-0 z-0">
+              <div class="absolute inset-y-0 right-0 z-0 w-[550px]">
                 <img
                   src="/images/pencilPic.jpg"
                   alt=""
@@ -165,11 +151,12 @@
                   Starting from $4500/month
                 </p>
 
-                <button
-                  class="mt-6 inline-flex items-center rounded-full border border-black/25 px-5 py-2 text-sm text-black/80 transition group-hover:border-black/40"
+                <NuxtLink
+                  to="/measurement-services"
+                  class="mt-6 inline-flex items-center rounded-full border border-black/25 px-5 py-2 text-sm text-black/80 transition hover:border-black/70"
                 >
                   Learn More
-                </button>
+                </NuxtLink>
 
                 <p class="mt-8 text-xs text-black/50">*Minimum 3 months commitment</p>
               </div>
@@ -242,20 +229,12 @@
         </a>
       </section>
     </div>
-
-
-
   </main>
 
-
-<Footer />
-
-
+  <Footer />
 </template>
 
 <script setup>
 // no script needed for the static hero; keep page lightweight
 const localePath = useLocalePath();
-
-
 </script>

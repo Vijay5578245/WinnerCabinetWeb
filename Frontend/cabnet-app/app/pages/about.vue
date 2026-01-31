@@ -41,22 +41,22 @@
         <!-- Scroll starts here -->
 
         <section
-          class="flex items-center mb-12 shadow-lg gap-8 md:gap-16 flex-col md:flex-row reveal"
+          class="flex items-center mb-12 shadow-lg gap-8 md:gap-16 flex-col md:flex-row"
           data-reveal-delay="260"
         >
           <div class="order-2">
             <h2
-              class="text-3xl font-extrabold mb-4 reveal"
+              class="text-3xl font-extrabold mb-4"
               data-reveal-delay="320"
             >
               CEO Eric Chen
             </h2>
-            <p class="text-gray-700 mb-4 pr-5 reveal" data-reveal-delay="380">
+            <p class="text-gray-700 mb-4 pr-5" data-reveal-delay="380">
               {{ $t("about.ceoDescription") }}
             </p>
           </div>
 
-          <div class="reveal" data-reveal-delay="440">
+          <div class="" data-reveal-delay="440">
             <img
               :src="pfImage"
               alt="CEO image"

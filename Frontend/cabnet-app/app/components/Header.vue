@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full h-24 fixed top-0 z-50 flex justify-center items-center px-7 transition-all duration-350"
+    class="w-full h-24 flex fixed top-0 z-50 flex justify-center items-center px-7 transition-all duration-350"
     :class="[
       hidden ? '-translate-y-full pointer-events-none delay-50' : 'translate-y-0 delay-0',
       // background classes (depends on scroll)
@@ -11,14 +11,38 @@
       textClass,
     ]"
   >
-    <nuxt-link to="/" class="text-lg font-bold"> Winner Cabinets </nuxt-link>
+    <div class="flex items-center space-x-4 absolute left-1/2 -translate-x-1/2">
+      <nuxt-link to="/" class="text-lg font-bold"> Winner Cabinets </nuxt-link>
 
-    <ul class="flex space-x-6 ml-6">
-      <li><NuxtLink to="/about">{{$t("header.about")}}</NuxtLink></li>
-      <li><NuxtLink to="/collections">{{$t("header.collections")}}</NuxtLink></li>
-    </ul>
+      <ul class="flex space-x-6 ml-6">
+        <li>
+          <NuxtLink to="/about">{{ $t("header.about") }}</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/collections">{{ $t("header.collections") }}</NuxtLink>
+        </li>
+      </ul>
+    </div>
+
+    <div class="ml-auto shrink-0">
+      <NuxtLink
+        class="cursor-pointer px-4 py-2"
+        :class="locale === 'en' ? 'font-bold' : ''"
+        :to="switchLocalePath('en')"
+      >
+        English
+      </NuxtLink>
+      /
+      <NuxtLink
+        class="cursor-pointer px-4 py-2"
+        :class="locale === 'zh' ? 'font-bold' : ''"
+        :to="switchLocalePath('zh')"
+      >
+        中文
+      </NuxtLink>
+    </div>
   </div>
-</template>s
+</template>
 
 <script setup>
 import { ref, onMounted, onBeforeUnmount, computed } from "vue";
@@ -26,10 +50,17 @@ import { useRoute } from "vue-router";
 
 const hidden = ref(false);
 const scrolled = ref(false);
-const localePath = useLocalePath()
+const localePath = useLocalePath();
+const { locale, setLocale } = useI18n();
+const switchLocalePath = useSwitchLocalePath()
 
 
 const route = useRoute();
+
+const switchLang = async (lang) => {
+  await setLocale(lang);
+  navigateTo(window.location.pathname, { replace: true })
+};
 // detect the hours page by path or name (adjust if your route name differs)
 
 const contrastPages = [
@@ -41,12 +72,10 @@ const contrastPages = [
   "collections",
 ];
 
-const isContrastPage = computed(
-  () => {
-    // 3. Check if the current path matches the localized path of any page in the list
-  return contrastPages.some(page => route.path === localePath(page))
-}
-);
+const isContrastPage = computed(() => {
+  // 3. Check if the current path matches the localized path of any page in the list
+  return contrastPages.some((page) => route.path === localePath(page));
+});
 
 // text color: force black on the hours page, otherwise white at top and black when scrolled
 const textClass = computed(() => {
