@@ -1,23 +1,24 @@
 <template>
-
-  <section class="relative h-screen pt-24 overflow-hidden">
-<img class="bg-gray-100 absolute w-full h-full z-10 top-1/3 left-1/2 -translate-x-1/2" src="/images/nvTest.jpg"/>
-
-    <!-- dim / color overlay for better text contrast -->
+  <section
+    class="bg-white flex flex-col items-center justify-center h-[96vh] text-center px-6 w-full z-5 overflow-hidden relative"
+  >
+    <img
+      src="/images/logbg2.png"
+      alt="Hero image showing cabinets"
+      class="absolute opacity-100 w-full object-cover hero-zoom"
+      loading="lazy"
+    />
     <div
-      class="h-auto absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/40"
+      class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"
     ></div>
+    <img
+      src="/images/WClogo.png"
+      alt="Hero image showing cabinets"
+      class="absolute opacity-100 h-[350px] object-cover top-40 left-70"
+      loading="lazy"
+    />
 
-    <!-- centered content -->
-    <div
-      class="relative z-10 flex flex-col items-center justify-center h-full text-center px-6"
-    >
-      <h1
-        class="text-white text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight max-w-4xl"
-        data-aos="fade-up"
-      >
-        {{ $t("index.welcome") }}
-      </h1>
+    <div class="absolute z-20 flex flex-col items-center top-130">
       <p class="text-white/90 mt-4 text-lg md:text-xl max-w-2xl">
         {{ $t("index.tagline") }}
       </p>
@@ -33,7 +34,64 @@
 
   <!-- page content below the hero -->
 
-  <main class="">
+  <main class="relative -top-4 z-10">
+    <!-- comapny views -->
+    <section class="bg-gray-100 h-[2000px] rounded-t-[18px]">
+      <div class="flex pt-16 mb-12 pl-6">
+        <div class="text-center px-6">
+          <h2 class="text-4xl font-extrabold text-black">Why Choose Winner Cabinets?</h2>
+        </div>
+      </div>
+
+      <section class="bg-white py-16 px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div class="flex flex-col items-start border-r border-gray-300 pr-8">
+            <p class="text-sm font-bold text-gray-900 mb-2">November 2024</p>
+
+            <h3 class="text-xl font-extrabold text-gray-900 leading-tight mb-4">
+              Magic Quadrant™ for Cloud ERP for Service-Centric Enterprises
+            </h3>
+
+            <p class="text-gray-700 mb-8 leading-relaxed">
+              Learn why Gartner named Oracle (Fusion Cloud ERP) a Leader in Gartner® Magic
+              Quadrant™ for Cloud ERP for Service-Centric Enterprises.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-start border-r border-gray-300 pr-8">
+            <p class="text-sm font-bold text-gray-900 mb-2">November 2024</p>
+
+            <h3 class="text-xl font-extrabold text-gray-900 leading-tight mb-4">
+              Magic Quadrant™ for Cloud ERP for Service-Centric Enterprises
+            </h3>
+
+            <p class="text-gray-700 mb-8 leading-relaxed">
+              Learn why Gartner named Oracle (Fusion Cloud ERP) a Leader in Gartner® Magic
+              Quadrant™ for Cloud ERP for Service-Centric Enterprises.
+            </p>
+          </div>
+
+          <div class="flex flex-col items-start">
+            <p class="text-sm font-bold text-gray-900 mb-2">November 2024</p>
+
+            <h3 class="text-xl font-extrabold text-gray-900 leading-tight mb-4">
+              Magic Quadrant™ for Cloud ERP for Service-Centric Enterprises
+            </h3>
+
+            <p class="text-gray-700 mb-8 leading-relaxed">
+              Learn why Gartner named Oracle (Fusion Cloud ERP) a Leader in Gartner® Magic
+              Quadrant™ for Cloud ERP for Service-Centric Enterprises.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+
+    </section>
+
+    <!-- the section for 4 blocks -->
+
     <section class="w-full bg-white text-black">
       <div class="mx-auto max-w-[90vw] py-16">
         <!-- GRID: 2 columns on md+, 1 column on mobile -->
@@ -238,3 +296,19 @@
 // no script needed for the static hero; keep page lightweight
 const localePath = useLocalePath();
 </script>
+
+<style scoped>
+.hero-zoom {
+  opacity: 1;
+  animation: zoomIn 5s ease-out forwards;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05); /* zoom in by 20% */
+  }
+}
+</style>
