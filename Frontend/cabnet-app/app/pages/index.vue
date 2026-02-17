@@ -23,12 +23,7 @@
         {{ $t("index.tagline") }}
       </p>
 
-      <NuxtLink
-        to="/hours-and-location"
-        class="mt-8 inline-block bg-white/90 text-black font-medium py-3 px-6 rounded-md shadow hover:bg-white transition"
-      >
-        Find a Showroom
-      </NuxtLink>
+      <ButtonToLink to="/about" class="py-5 px-20 text-white hover:bg-gradient-to-r hover:from-yellow-500 hover:to-yellow-100/80"> Find A Showroom </ButtonToLink>
     </div>
   </section>
 
@@ -36,56 +31,68 @@
 
   <main class="relative -top-4 z-10">
     <!-- comapny views -->
-    <section class="bg-gray-100 h-[2000px] rounded-t-[18px]">
-      <div class="flex pt-16 mb-12 pl-6">
+    <section class="bg-white rounded-t-[18px]">
+      <div class="flex pt-16 mb-4 pl-6">
         <div class="text-center px-6">
-          <h2 class="text-4xl font-extrabold text-black">Why Choose Winner Cabinets?</h2>
+          <h2 class="text-4xl font-extrabold text-black">{{ $t("index.usHeader") }}</h2>
         </div>
       </div>
 
-      <section class="bg-white py-16 px-8">
+      <!-- Why us grids -->
+
+      <section class="flex flex-col items-center justify-center bg-white pt-20 pb-40 px-8">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
           <div class="flex flex-col items-start border-r border-gray-300 pr-8">
-            <p class="text-sm font-bold text-gray-900 mb-2">November 2024</p>
 
-            <h3 class="text-xl font-extrabold text-gray-900 leading-tight mb-4">
-              Magic Quadrant™ for Cloud ERP for Service-Centric Enterprises
+
+            <h3 class="text-3xl font-extrabold text-gray-900 leading-tight mb-4">
+              {{ $t("index.usBoxHeader1") }}
             </h3>
 
             <p class="text-gray-700 mb-8 leading-relaxed">
-              Learn why Gartner named Oracle (Fusion Cloud ERP) a Leader in Gartner® Magic
-              Quadrant™ for Cloud ERP for Service-Centric Enterprises.
+              {{ $t("index.usBoxDescription1") }}
             </p>
           </div>
 
           <div class="flex flex-col items-start border-r border-gray-300 pr-8">
-            <p class="text-sm font-bold text-gray-900 mb-2">November 2024</p>
 
-            <h3 class="text-xl font-extrabold text-gray-900 leading-tight mb-4">
-              Magic Quadrant™ for Cloud ERP for Service-Centric Enterprises
+
+            <h3 class="text-3xl font-extrabold text-gray-900 leading-tight mb-4">
+              {{ $t("index.usBoxHeader2") }}
             </h3>
 
             <p class="text-gray-700 mb-8 leading-relaxed">
-              Learn why Gartner named Oracle (Fusion Cloud ERP) a Leader in Gartner® Magic
-              Quadrant™ for Cloud ERP for Service-Centric Enterprises.
+              {{ $t("index.usBoxDescription2") }}
             </p>
           </div>
 
           <div class="flex flex-col items-start">
-            <p class="text-sm font-bold text-gray-900 mb-2">November 2024</p>
 
-            <h3 class="text-xl font-extrabold text-gray-900 leading-tight mb-4">
-              Magic Quadrant™ for Cloud ERP for Service-Centric Enterprises
+
+            <h3 class="text-3xl font-extrabold text-gray-900 leading-tight mb-4">
+             {{ $t("index.usBoxHeader3") }}
             </h3>
 
             <p class="text-gray-700 mb-8 leading-relaxed">
-              Learn why Gartner named Oracle (Fusion Cloud ERP) a Leader in Gartner® Magic
-              Quadrant™ for Cloud ERP for Service-Centric Enterprises.
+              {{ $t("index.usBoxDescription3") }}
             </p>
           </div>
 
         </div>
+
+        <div class="py-10">
+          <ButtonToLink to="/about" class="py-5 px-20 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-yellow-100"> About </ButtonToLink>
+      </div>
       </section>
+
+
+<!-- factory pictures scroll bars -->
+
+
+
+<ScrollPic />
+
+
 
 
     </section>

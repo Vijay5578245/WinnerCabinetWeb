@@ -1,7 +1,18 @@
 {
   "index":{
     "welcome": "欢迎来到 Winner Cabinets",
-    "tagline": "为您的家带来舒适"
+    "tagline": "我們不只建造材料，我們提供安心與幸福。",
+    "usHeader" : "Winner Cabinets 的幸福公式",
+    "usDescription" : "我們相信，真正的幸福來自於安心。從材料來源、品質把關，到價格透明與實體協助，我們希望每一個選擇，都能讓你放心、用得久，也住得開心。",
+    "usBoxTitle1" : "smth",
+    "usBoxHeader1" : "在地材料",
+    "usBoxDescription1" : "我們優先選用在地材料，熟悉來源、穩定供應，不僅能確保品質一致，也能有效降低運輸與中間成本，讓每一份材料都值得信賴。",
+    "usBoxTitle2" : "smth",
+    "usBoxHeader2" : "嚴格品質 × 價格透明",
+    "usBoxDescription2" : "價格透明，是我們對品質的尊重。我們清楚標示成本與規格，不做模糊報價，讓你知道每一分花費換來的是實在、耐用且經得起時間考驗的品質。",
+    "usBoxTitle3" : "smth",
+    "usBoxHeader3" : "實體支持",
+    "usBoxDescription3" : "我們提供實體到場的選材與建造協助，陪你親自比較、理解與決定，從第一步到完成，都有人在旁支持，讓整個過程安心而踏實。"
   },
 
   "header": {
