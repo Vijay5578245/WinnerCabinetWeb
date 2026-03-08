@@ -18,12 +18,15 @@ export default defineNuxtConfig({
     },
   },
   devtools: { enabled: true },
-  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/scripts', '@nuxtjs/i18n'],
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/scripts', '@nuxtjs/i18n', '@nuxt/fonts'],
   css: ['@/assets/css/main.css'],
   vite: {
     plugins : [
       tailwindcss(),
     ],
+  },
+  fonts: {
+    processCSSVariables: true
   },
   i18n: {
     strategy: 'prefix',

@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+
+:root{
+  --font-sans: 'Poppins', sans-serif;
+}
+
+html[lang^="zh"] {
+  --font-sans: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+}

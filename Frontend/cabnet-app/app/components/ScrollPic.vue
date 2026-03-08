@@ -1,5 +1,24 @@
 <template>
-  <section class="relative w-full max-w-9xl mx-auto pt-12 pb-6">
+  <section class="w-full max-w-9xl mx-auto pt-12 pb-6">
+    <div class="relative flex h-10 md:h-20 mb-10 items-center justify-center border-t border-gray-300 ">
+
+
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(0,0,0,0.15)_1px,transparent_0)]
+            [mask-image:linear-gradient(to_bottom,black_80%,transparent)] [background-size:12px_12px]"></div>
+
+        <h2 class="tracking-widest text-gray-700 text-black mx-auto">SMTH</h2>
+
+
+      <div class="rounded-[2px] flex items-center p-5 z-10 absolute right-0 top-0 text-black">
+        <button @click="scrollToSlide(activeIndex - 1)">
+          <ChevronLeft :size="35" stroke-width="1" :color="leftEnd"/>
+        </button>
+        <p class="w-12 text-center">{{ activeIndex + 1 }} / {{ images.length }}</p>
+        <button @click="scrollToSlide(activeIndex + 1)">
+          <ChevronRight :size="35" stroke-width="1" :color="rightEnd"/>
+        </button>
+      </div>
+    </div>
     <div
       class="text-black flex overflow-x-scroll snap-x snap-mandatory scroll-smooth gap-10 px-10 no-scrollbar"
       ref="scrollContainer"
@@ -15,29 +34,12 @@
         <div class="absolute inset-0 bg-black/20"></div>
       </div>
     </div>
-
-    <div class="sticky w-fit mx-auto bottom-2 pb-5 pt-12">
-
-    <div
-      class="rounded-[2px] flex items-center space-x-4 p-5 bg-black/40 backdrop-blur-sm z-10"
-    >
-      <button
-        v-for="(_, index) in images"
-        :key="index"
-        @click="scrollToSlide(index)"
-        :class="[
-          'w-3 h-3 rounded-full transition-all duration-300',
-          activeIndex === index ? 'bg-white scale-110' : 'bg-white/50 hover:bg-white/80',
-        ]"
-        :aria-lable="`Go to the slide ${index + 1}`"
-      ></button>
-    </div>
-</div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, computed } from "vue";
+import { ChevronLeft, ChevronRight } from "lucide-vue-next";
 
 const images = ref([
   {
@@ -62,8 +64,12 @@ const scrollContainer = ref<HTMLElement | null>(null);
 const activeIndex = ref(0);
 let isManualScroll = false;
 let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
+const leftEnd = computed(() => activeIndex.value === 0 ? "gray" : "black");
+const rightEnd = computed(() => activeIndex.value === images.value.length - 1 ? "gray" : "black");
 
 // function to a specific slide when clicking the button
+
+
 
 const scrollToSlide = (index: number) => {
   if (!scrollContainer.value) return;
@@ -87,9 +93,10 @@ const scrollToSlide = (index: number) => {
     scrollTimeout = setTimeout(() => {
       isManualScroll = false;
     }, 500);
+
+
   }
 };
-
 
 const onScroll = () => {
   if (isManualScroll || !scrollContainer.value) return;
@@ -114,6 +121,8 @@ const onScroll = () => {
     });
 
     activeIndex.value = closestIndex;
+
+
   }, 0); // Debounce scroll event for performance
 };
 
@@ -121,10 +130,6 @@ const onScroll = () => {
 onUnmounted(() => {
   clearTimeout(scrollTimeout!);
 });
-
-
-
-
 </script>
 
 <style>
