@@ -3,8 +3,11 @@
     <!-- layered background decoration -->
     <div class="pointer-events-none absolute inset-0">
       <div
-        class="absolute left-1/2 top-10 h-40 w-[42rem] -translate-x-1/2 rounded-3xl bg-gray-50"
+        class="absolute left-1/2 top-10 h-40 w-[42rem] -translate-x-1/2 rounded-3xl bg-yellow-50"
       />
+      <p class="absolute text-[20px] md:text-[40px] left-1/2 top-15 md:top-20 text-lg font-bold text-gray-900 -translate-x-1/2">
+        Our Advantage
+      </p>
     </div>
 
     <div

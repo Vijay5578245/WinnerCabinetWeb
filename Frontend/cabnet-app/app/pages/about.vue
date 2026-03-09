@@ -138,6 +138,55 @@
           </p>
         </section>
 
+        <!-- factory pictures and description -->
+        <div class="h-[100px]"></div>
+
+        <div class="flex flex-col items-center gap-3">
+          <p class="text-yellow-500 text-xs font-bold tracking-[0.2em] uppercase">Our Facility</p>
+          <p class="text-black font-bold text-[30px] md:text-[40px] w-full text-center">
+            {{ $t("index.factory.header") }}
+          </p>
+          <div class="flex items-center gap-3 mt-1">
+            <div class="h-px w-16 bg-gray-300"></div>
+            <div class="h-1.5 w-1.5 rounded-full bg-yellow-400"></div>
+            <div class="h-px w-16 bg-gray-300"></div>
+          </div>
+        </div>
+
+        <section class="dotted-fade h-[2000px] relative mt-12">
+          <div class="h-[75px]"></div>
+
+          <div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 px-6 py-12">
+              <div class="flex items-center justify-center">
+                <section
+                  class="flex flex-col h-44 md:h-64 w-64 md:w-128 bg-white shadow-lg rounded-lg overflow-hidden"
+                >
+                  <div>
+                    <img src="/images/nvTest.jpg" alt="" />
+                  </div>
+
+                  <div>
+                    <h1 class="text-gray-900 font-bold text-2xl">Title</h1>
+                  </div>
+                </section>
+              </div>
+              <div class="relative flex flex-col text-black items-center justify-center">
+                <p class="text-[30px] md:text-[40px] w-full text-center">
+                  TITLE is gonna be long as fuck boi holy
+                </p>
+                <p class="p-30">
+                  some testing words to see if the card can expand with content and maintain
+                  the same height as the other card. This is to test the flexbox layout and
+                  see if it can handle different content sizes without breaking the design
+                  or causing overflow issues. The card should be able to grow in height
+                  while keeping the overall layout intact and visually appealing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <!-- Large visual / CTA -->
         <section class="mt-8 reveal" data-reveal-delay="120">
           <div class="rounded overflow-hidden shadow-lg">
