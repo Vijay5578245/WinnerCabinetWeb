@@ -12,3 +12,9 @@ html[lang^="zh"] {
 body {
   font-family: var(--font-sans);
 }
+
+.dotted-fade {
+  background: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.15) 1px, transparent 0);
+  background-size: 12px 12px;
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}

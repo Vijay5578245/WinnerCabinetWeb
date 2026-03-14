@@ -27,10 +27,10 @@
       <div
         v-for="(image, index) in images"
         :key="index"
-        class="relative snap-center flex-shrink-0 h-64 md:h-full rounded-[10px] overflow-hidden shadow-lg"
+        class="relative snap-center flex-shrink-0 w-[80vw] md:w-200 h-64 md:h-128 rounded-[10px] overflow-hidden shadow-lg"
         @click="scrollToSlide(index)"
       >
-        <img :src="image.src" alt="image.alt" class="w-200 h-64 md:h-128 object-cover" />
+        <img :src="image.src" alt="image.alt" class="w-full h-full object-cover" />
         <div class="absolute inset-0 bg-black/20"></div>
       </div>
     </div>

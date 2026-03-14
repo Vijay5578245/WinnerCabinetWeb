@@ -1,5 +1,6 @@
 <template>
   <section
+    ref="heroRef"
     class="bg-white flex flex-col items-center justify-center h-[96vh] text-center px-6 w-full z-5 overflow-hidden relative"
   >
     <img
@@ -14,11 +15,11 @@
     <img
       src="/images/WClogo.png"
       alt="Hero image showing cabinets"
-      class="absolute opacity-100 max-h-[350px] h-auto w-auto object-cover left-1/2 top-3/7 -translate-x-1/2 -translate-y-1/2"
+      class="hero-logo absolute opacity-100 max-h-[350px] h-auto w-auto object-cover left-1/2 top-3/7 -translate-x-1/2 -translate-y-1/2"
       loading="lazy"
     />
 
-    <div class="absolute z-20 flex flex-col items-center top-2/3">
+    <div class="hero-text absolute z-20 flex flex-col items-center top-2/3">
       <p class="text-white/90 mt-4 text-lg md:text-xl max-w-2xl">
         {{ $t("index.tagline") }}
       </p>
@@ -37,7 +38,9 @@
   <main class="relative -top-4 z-10">
 
 
+
     <section class="bg-white rounded-t-[18px] overflow-hidden">
+
       <!-- Cards about how we works, what we do -->
 
       <div class="border-t border-gray-300"></div>
@@ -54,10 +57,10 @@
           <div class="h-1.5 w-1.5 rounded-full bg-yellow-400"></div>
           <div class="h-px w-10 bg-yellow-400"></div>
         </div>
-        <p class="relative text-amber-500 font-bold text-[10px] md:text-[20px] tracking-widest uppercase">
+        <p class="design-header relative text-amber-500 font-bold text-[10px] md:text-[20px] tracking-widest uppercase">
           {{ $t("index.designLine1") }}
         </p>
-        <div class="relative flex flex-col justify-center items-center">
+        <div class="design-header relative flex flex-col justify-center items-center">
           <p class="text-black font-bold text-[25px] md:text-[50px]">
             {{ $t("index.designLine2") }}
           </p>
@@ -65,6 +68,8 @@
             {{ $t("index.designLine3") }}
           </p>
         </div>
+
+              <ScrollPic />
 
         <!-- decorative color chips -->
         <div class="relative flex items-center gap-2 mt-2">
@@ -86,8 +91,8 @@
           class="flex flex-col items-center justify-center bg-white pt-20 pb-20 px-8"
         >
 
-          <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div class="flex flex-col items-start border-r border-gray-200 pr-8">
+          <div class="strengths-grid max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="strength-col flex flex-col items-start border-r border-gray-200 pr-8">
               <span class="text-[72px] font-black text-gray-100 leading-none select-none -mb-2">01</span>
               <div class="w-10 h-1 bg-yellow-400 mb-4"></div>
               <h3 class="text-3xl font-extrabold text-gray-900 leading-tight mb-4">
@@ -98,7 +103,7 @@
               </p>
             </div>
 
-            <div class="flex flex-col items-start border-r border-gray-200 pr-8">
+            <div class="strength-col flex flex-col items-start border-r border-gray-200 pr-8">
               <span class="text-[72px] font-black text-gray-100 leading-none select-none -mb-2">02</span>
               <div class="w-10 h-1 bg-yellow-400 mb-4"></div>
               <h3 class="text-3xl font-extrabold text-gray-900 leading-tight mb-4">
@@ -109,7 +114,7 @@
               </p>
             </div>
 
-            <div class="flex flex-col items-start">
+            <div class="strength-col flex flex-col items-start">
               <span class="text-[72px] font-black text-gray-100 leading-none select-none -mb-2">03</span>
               <div class="w-10 h-1 bg-yellow-400 mb-4"></div>
               <h3 class="text-3xl font-extrabold text-gray-900 leading-tight mb-4">
@@ -144,20 +149,20 @@
 
     <!-- the section for 4 blocks -->
 
-    <section class="w-full bg-white text-black pt-20">
-      <div class="mx-auto max-w-[90vw] py-16">
+    <section class="w-full bg-white text-black pt-20 border-t border-gray-300">
+      <div class="mx-auto max-w-[90vw] py-0">
         <!-- Section header -->
-        <div class="mb-10">
+        <div class="services-header mb-10">
           <p class="text-yellow-500 text-xs font-bold tracking-[0.2em] uppercase mb-3">What We Offer</p>
           <h2 class="text-4xl font-extrabold text-black">Our Services</h2>
           <div class="mt-4 h-px w-16 bg-yellow-400"></div>
         </div>
         <!-- GRID: 2 columns on md+, 1 column on mobile -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="services-grid grid grid-cols-1 md:grid-cols-2 gap-12">
           <!-- LEFT COLUMN (stack) -->
           <div class="flex flex-col gap-18">
             <!-- Big card -->
-            <div class="relative p-10 overflow-hidden h-[60vh] group">
+            <div class="service-card relative p-10 overflow-hidden h-[60vh] group">
               <div class="absolute inset-0 z-0">
                 <img
                   src="/images/pencilPic.jpg"
@@ -180,7 +185,7 @@
             </div>
 
             <!-- Small card -->
-            <div class="relative p-10 overflow-hidden h-[40vh] group">
+            <div class="service-card relative p-10 overflow-hidden h-[40vh] group">
               <div class="absolute inset-0 z-0">
                 <img
                   src="/images/pencilPic.jpg"
@@ -205,7 +210,7 @@
           <!-- RIGHT COLUMN (stack) -->
           <div class="flex flex-col gap-18">
             <!-- Small card -->
-            <div class="relative p-10 overflow-hidden h-[40vh] group">
+            <div class="service-card relative p-10 overflow-hidden h-[40vh] group">
               <div class="absolute right-0 inset-y-0 z-0 w-full">
                 <img
                   src="/images/pencilPic.jpg"
@@ -228,7 +233,7 @@
             </div>
 
             <!-- Big card -->
-            <div class="relative p-10 overflow-hidden h-[60vh] group">
+            <div class="service-card relative p-10 overflow-hidden h-[60vh] group">
               <div class="absolute inset-y-0 right-0 z-0 w-full">
                 <img
                   src="/images/pencilPic.jpg"
@@ -256,11 +261,11 @@
       </div>
     </section>
 
-          <ScrollPic />
 
-    <div class="bg-white">
+
+    <div class="bg-white pt-20">
       <section
-        class="max-w-[95vw] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch py-12"
+        class="collections-section max-w-[95vw] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch py-12"
       >
         <!-- Large image/content card (left) -->
         <NuxtLink
@@ -323,17 +328,112 @@
   <Footer />
 </template>
 
-<script setup>
+<script setup lang="ts">
+import { ref, onMounted, onUnmounted } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const localePath = useLocalePath();
+const heroRef = ref<HTMLElement | null>(null);
+
+let ctx: gsap.Context | null = null;
+
+onMounted(() => {
+  ctx = gsap.context(() => {
+    // Hero: logo and tagline/button fade in on load
+    gsap.from(".hero-logo", {
+      autoAlpha: 0,
+      duration: 1,
+      ease: "power2.out",
+      delay: 0.2,
+    });
+    gsap.from(".hero-text", {
+      autoAlpha: 0,
+      y: 24,
+      duration: 0.9,
+      ease: "power2.out",
+      delay: 0.5,
+    });
+
+    // Design section headings
+    gsap.from(".design-header", {
+      autoAlpha: 0,
+      y: 20,
+      duration: 0.7,
+      ease: "power2.out",
+      stagger: 0.12,
+      scrollTrigger: {
+        trigger: ".design-header",
+        start: "top 85%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    // Our Strengths columns stagger
+    gsap.from(".strength-col", {
+      autoAlpha: 0,
+      y: 32,
+      duration: 0.65,
+      ease: "power2.out",
+      stagger: 0.15,
+      scrollTrigger: {
+        trigger: ".strengths-grid",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    // What We Offer header
+    gsap.from(".services-header", {
+      autoAlpha: 0,
+      y: 20,
+      duration: 0.7,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".services-header",
+        start: "top 85%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    // Service cards stagger
+    gsap.from(".service-card", {
+      autoAlpha: 0,
+      y: 28,
+      duration: 0.65,
+      ease: "power2.out",
+      stagger: 0.12,
+      scrollTrigger: {
+        trigger: ".services-grid",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    // Collections section items stagger
+    gsap.from(".collections-section > *", {
+      autoAlpha: 0,
+      y: 24,
+      duration: 0.65,
+      ease: "power2.out",
+      stagger: 0.15,
+      scrollTrigger: {
+        trigger: ".collections-section",
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+  }, heroRef.value);
+});
+
+onUnmounted(() => {
+  ctx?.revert();
+});
 </script>
 
 <style scoped>
-.dotted-fade {
-  background: radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.15) 1px, transparent 0);
-  background-size: 12px 12px;
-  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
-}
-
 .hero-zoom {
   opacity: 1;
   animation: zoomIn 5s ease-out forwards;
