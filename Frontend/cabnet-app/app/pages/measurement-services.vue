@@ -1,91 +1,80 @@
-<!-- components/DiagonalStripes.vue -->
 <template>
-  <div
-    class="relative overflow-hidden"
-    :class="wrapperClass"
-    :style="stripeVars"
-    aria-hidden="true"
-  >
-    <!-- pattern layer -->
-    <div class="absolute inset-0 stripes" />
+<div class="h-[1000px]"></div>
 
-    <!-- optional content slot -->
-    <div v-if="$slots.default" class="relative">
-      <slot />
+
+  <div class="box w-full h-[100vh] rounded-lg relative" style="background-color: #f3f4f6;" ref="boxRef">
+    <div>
+    <h1 class="absolute title1 text-4xl font-bold text-center pt-40 opacity-0">Scroll down to see the animation1</h1>
+    <h1 class="absolute title2 text-4xl font-bold text-center pt-40 opacity-0">Scroll down to see the animation2</h1>
+    <h1 class="absolute title3 text-4xl font-bold text-center pt-40 opacity-0">Scroll down to see the animation3</h1>
     </div>
   </div>
+
+
+<div class="h-[1000px]"></div>
 </template>
 
+
 <script setup lang="ts">
-type Props = {
-  /**
-   * Wrapper classes like: "h-16 rounded-xl"
-   */
-  wrapperClass?: string
+import {gsap} from "gsap";
+import {onMounted, ref, onUnmounted} from "vue";
+import { ScrollTrigger } from "gsap/all";
 
-  /**
-   * Stripe angle in degrees. (e.g. 20, 30, 45)
-   */
-  angle?: number
+gsap.registerPlugin(ScrollTrigger);
 
-  /**
-   * Stripe thickness in px.
-   */
-  stripe?: number
+const boxRef = ref<HTMLElement | null>(null);
+const ctx = ref<gsap.Context | null>(null);
 
-  /**
-   * Gap thickness in px (space between stripes).
-   */
-  gap?: number
+onMounted(() => {
 
-  /**
-   * Stripe color (any CSS color).
-   */
-  color?: string
+  ctx.value = gsap.context(() => {
 
-  /**
-   * Background under the stripes (usually transparent).
-   */
-  base?: string
 
-  /**
-   * Opacity of stripe layer (0 ~ 1).
-   */
-  opacity?: number
-}
+  const tl = gsap.timeline({
+    scrollTrigger:{
+      trigger: boxRef.value,
+      start: 'top top',
+      end: '+=3000px top',
+      pin: true,
+      scrub: true,
+      markers: true
+    }
+  });
 
-const props = withDefaults(defineProps<Props>(), {
-  wrapperClass: "h-16 w-full rounded-xl",
-  angle: 25,
-  stripe: 10,
-  gap: 10,
-  color: "#FACC15", // Tailwind yellow-400-ish
-  base: "transparent",
-  opacity: 1,
+  tl.to('.title1', {
+    color: '#00ff00',
+    duration: 10,
+    opacity: 1,
+    y: -50
+  })
+
+
+ tl.to('.title2', {
+    color: '#00ff00',
+    duration: 10,
+    opacity: 1,
+    y: -50
+  })
+    .to('.title1', { opacity: 0, duration: 5 }, "<") // fade out after a delay of 1 second
+
+ tl.to('.title3', {
+    color: '#00ff00',
+    duration: 10,
+    opacity: 1,
+    y: -50
+  })
+    .to('.title2', { opacity: 0, duration: 5 }, "<") // fade out after a delay of 1 second
+
+  tl.to(".box", {
+    backgroundColor: '#0000ff',
+    duration: 30,
+  }, 0)
+
+})
 })
 
-const stripeVars = computed(() => {
-  return {
-    "--stripe-angle": `${props.angle}deg`,
-    "--stripe-size": `${props.stripe}px`,
-    "--stripe-gap": `${props.gap}px`,
-    "--stripe-color": props.color,
-    "--stripe-base": props.base,
-    "--stripe-opacity": `${props.opacity}`,
-  } as Record<string, string>
+onUnmounted(() => {
+  ctx.value?.revert()
 })
+
 </script>
-
-<style scoped>
-.stripes {
-  opacity: var(--stripe-opacity);
-  background:
-    repeating-linear-gradient(
-      var(--stripe-angle),
-      var(--stripe-color) 0,
-      var(--stripe-color) var(--stripe-size),
-      var(--stripe-base) var(--stripe-size),
-      var(--stripe-base) calc(var(--stripe-size) + var(--stripe-gap))
-    );
-}
-</style>
