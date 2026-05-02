@@ -2,8 +2,6 @@
  <template>
     <div>
       <Header />
-      <main>
-        <slot />
-      </main>
+      <slot />
     </div>
  </template>

@@ -9,6 +9,10 @@ html[lang^="zh"] {
   --font-sans: 'Inter', sans-serif;
 }
 
+html {
+  overflow-y: scroll; /* always reserve scrollbar space — prevents CLS when scrollbar appears */
+}
+
 body {
   font-family: var(--font-sans);
 }
