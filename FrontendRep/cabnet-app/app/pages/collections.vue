@@ -2,7 +2,7 @@
   <main class="bg-white min-h-screen overflow-x-hidden">
 
     <!-- Hero -->
-    <section class="relative h-[55dvh] overflow-hidden">
+    <section class="relative z-10 h-[55dvh] overflow-hidden">
       <img
         src="/images/nvTest.jpg"
         alt="Our Collections"

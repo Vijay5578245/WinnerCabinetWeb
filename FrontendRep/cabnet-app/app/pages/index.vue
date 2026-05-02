@@ -15,8 +15,8 @@
         <img
           src="/images/WClogo.png"
           alt="Winner Cabinets logo"
-          class="hero-logo h-auto w-auto object-contain brightness-0 invert"
-          style="max-height: min(280px, 35vw);"
+          class="hero-logo h-auto w-auto object-contain"
+          style="max-height: min(280px, 35vw); filter: brightness(1.25) drop-shadow(0 2px 9px rgba(0,0,0,0.43)) drop-shadow(0 0 7px rgba(250,204,21,0.18));"
           loading="eager"
         />
 
@@ -37,10 +37,10 @@
     </section>
 
     <!-- ── MAIN ──────────────────────────────────────── -->
-    <main class="relative z-10 bg-white">
+    <main class="relative z-10 bg-white -mt-5 rounded-t-2xl overflow-hidden">
 
       <!-- DESIGN INTRO -->
-      <section class="relative overflow-hidden rounded-t-2xl border-t border-gray-200 bg-white px-6 pt-20 pb-0">
+      <section class="relative overflow-hidden border-t border-gray-200 bg-white px-6 pt-20 pb-0">
         <div class="absolute inset-0 bg-gradient-to-b from-amber-50/70 via-yellow-50/30 to-white pointer-events-none"></div>
         <div class="dot-pattern-fade absolute inset-0 opacity-50 pointer-events-none"></div>
 
