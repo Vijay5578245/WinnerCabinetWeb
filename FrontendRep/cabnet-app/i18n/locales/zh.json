@@ -1,0 +1,127 @@
+{
+  "header": {
+    "home": "首页",
+    "about": "关于我们",
+    "services": "服务",
+    "contact": "联系我们",
+    "collections": "系列产品",
+    "hours": "营业时间",
+    "measurement": "测量服务"
+  },
+
+  "index": {
+    "welcome": "欢迎来到 Winner Cabinets",
+    "tagline": "我們不只建造材料，我們提供安心與幸福。",
+    "heroCta": "查找展厅",
+    "designLabel": "专业设计",
+    "designHeadline1": "从概念到细节，量身定制。",
+    "designHeadline2": "让每一个空间都能展现独特的风格与功能。",
+    "strengthsLabel": "我们的优势",
+    "strengthsHeadline": "Winner Cabinets 的幸福公式",
+    "strengthsDescription": "我们相信，真正的幸福来自于安心。从材料来源、品质把关，到价格透明与实体协助，我们希望每一个选择，都能让你放心。",
+    "strengthsAboutCta": "关于我们",
+    "usBoxHeader1": "在地材料",
+    "usBoxDescription1": "我们优先选用在地材料，熟悉来源、稳定供应，不仅能确保品质一致，也能有效降低运输与中间成本。",
+    "usBoxHeader2": "严格品质 × 价格透明",
+    "usBoxDescription2": "价格透明，是我们对品质的尊重。我们清楚标示成本与规格，不做模糊报价，让你知道每一分花费换来的是实在、耐用的品质。",
+    "usBoxHeader3": "实体支持",
+    "usBoxDescription3": "我们提供实体到场的选材与建造协助，陪你亲自比较、理解与决定，从第一步到完成，都有人在旁支持。",
+    "servicesLabel": "我们的服务",
+    "servicesHeadline": "服务项目",
+    "collectionsLabel": "我们的作品",
+    "collectionsHeadline": "系列产品",
+    "collectionsBody": "探索我们多元化的橱柜系列，每一款都专为不同风格和需求而设计。",
+    "collectionsShop": "前往选购"
+  },
+
+  "about": {
+    "title": "关于我们",
+    "description": "Winner Cabinets 致力于为客户提供高质量的橱柜解决方案。我们的团队拥有多年的行业经验。",
+    "storyLabel": "我们的故事",
+    "storyHeadline": "十年工艺，铸就品质",
+    "ceoName": "CEO 陈先生",
+    "ceoDescription": "ERIC 有着20几年公司 owner 的管理经验，本人非常注重信用，接触橱柜行业已经超过10年，本人非常喜欢专研木工的工作，对每个项目都尽心尽责。为人大度，信守承诺，对市场的敏感度强，学习力强，可以为客人提供各种落地方案。公司主营业务：定制个人客户新房或旧房换新：厨房柜子，餐边柜，卫生间柜子，书柜，衣柜，鞋柜，墙板，电视墙等等；商业项目的定制：办公区域，休息室柜子和 MILLWORK，前台，护墙板，吊顶等等。",
+    "visionLabel": "走进 Winner Cabinets",
+    "visionTitle": "我们的愿景",
+    "visionBody": "我们认为设计不只是外观，而是一种生活方式，能提升日常每一刻的质感。我们的工作专注于简洁、品质和经久耐用的细节。",
+    "missionTitle": "我们的使命",
+    "missionBody1": "打造兼具永恒形态与舒适功能的橱柜。我们优先考虑可持续选择、精心工艺和耐用材料，让每一件产品都像外表一样出色。",
+    "missionBody2": "联系我们，了解更多关于我们的工艺和材料。",
+    "knowUsTitle": "了解我们",
+    "knowUsBody": "从精心策划的系列产品到对可持续发展的承诺，Winner Cabinets 的每一个细节都体现了我们对品质和设计的执着。我们邀请您探索我们的产品，发现我们的橱柜如何提升您的生活空间。"
+  },
+
+  "collections": {
+    "heroLabel": "探索",
+    "heroTitle": "系列产品",
+    "galleryLabel": "我们的作品",
+    "galleryTitle": "项目相册",
+    "galleryBody": "来自大温哥华地区的部分定制橱柜项目展示。",
+    "galleryCta": "查看所有照片",
+    "productsLabel": "我们的产品",
+    "productsTitle": "产品系列",
+    "productsBody": "从厨房橱柜到浴室柜，探索我们的定制系列。",
+    "viewCollection": "查看系列",
+    "kitchenTitle": "厨房橱柜",
+    "kitchenCategory": "厨房",
+    "kitchenDesc": "根据您的布局和风格定制的厨房橱柜。",
+    "vanityTitle": "浴室柜",
+    "vanityCategory": "浴室",
+    "vanityDesc": "优雅的浴室柜解决方案，最大化空间利用。",
+    "closetTitle": "衣柜系统",
+    "closetCategory": "储物",
+    "closetDesc": "针对各种房间尺寸的智能衣柜设计。",
+    "millworkTitle": "定制木工",
+    "millworkCategory": "特色产品",
+    "millworkDesc": "嵌入式家具、娱乐单元及各种定制件。"
+  },
+
+  "hours": {
+    "heroLabel": "我们的位置",
+    "heroTitle": "营业时间与位置",
+    "showroomLabel": "列治文展厅",
+    "showroomName": "Winner Cabinets",
+    "addressLabel": "地址",
+    "address": "160 – 4551 No 3 Rd\n列治文，BC V6X 2C3",
+    "phoneLabel": "电话",
+    "mapCta": "在地图中打开",
+    "callCta": "致电我们",
+    "hoursLabel": "到访时间",
+    "hoursTitle": "营业时间",
+    "hoursBody": "我们每周七天营业，方便您随时到访。我们的团队随时为您提供帮助，找到最适合您空间的橱柜解决方案。",
+    "faqLabel": "常见问题",
+    "faqTitle": "关于展厅的常见问题。",
+    "today": "今天"
+  },
+
+  "measurement": {
+    "label": "常见问题",
+    "title": "测量服务 — 常见问题",
+    "heroBody": "我们的专业测量服务派遣经过培训的专家到您家中精确测量，确保您的橱柜订单完美契合。"
+  },
+
+  "footer": {
+    "tagline": "精工细作，\n经久耐用。",
+    "exploreLabel": "探索",
+    "visitLabel": "到访我们",
+    "visitBody": "亲临我们的列治文展厅，亲身体验我们的橱柜。",
+    "visitCta": "查找展厅",
+    "copyright": "© 2025 Winner Cabinets — 保留所有权利",
+    "quality": "品质融入每一个细节"
+  },
+
+  "cards": {
+    "cardA": {
+      "title": "我们的服务",
+      "description": "我们提供全面的橱柜定制服务，从设计到安装，确保每一个细节都符合客户的需求。无论是新房装修还是旧房翻新，我们都能提供专业的解决方案。"
+    },
+    "cardB": {
+      "title": "我们的团队",
+      "description": "我们的团队由经验丰富的设计师、工匠和安装专家组成，致力于为客户提供高质量的橱柜解决方案。我们注重细节，追求卓越。"
+    },
+    "cardC": {
+      "title": "我们的承诺",
+      "description": "我们对每个项目提供全程支持，致力于让您满意。从第一次咨询到最终安装，我们全程陪伴，确保每一步都令您安心。"
+    }
+  }
+}

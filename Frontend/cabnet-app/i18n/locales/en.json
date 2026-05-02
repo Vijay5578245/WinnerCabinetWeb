@@ -1,3 +1,53 @@
 {
-  "hello": "Hello world"
+  "index": {
+    "welcome": "Welcome to Winner Cabinets",
+    "tagline": "We don't just build cabinets — we craft spaces you'll love living in.",
+    "usHeader": "Why Choose Winner Cabinets",
+    "usDescription": "We believe quality should never come at the cost of trust. From material sourcing to transparent pricing and hands-on support, every choice we make is designed to give you peace of mind.",
+    "usBoxTitle1": "",
+    "usBoxHeader1": "Local Materials",
+    "usBoxDescription1": "We source materials locally whenever possible — familiar origins, reliable supply, and consistent quality that eliminates unnecessary shipping costs and keeps every piece trustworthy.",
+    "usBoxTitle2": "",
+    "usBoxHeader2": "Quality × Transparent Pricing",
+    "usBoxDescription2": "Transparent pricing is our commitment to quality. We clearly list costs and specifications with no vague estimates, so you know exactly what every dollar gets you — durable, time-tested craftsmanship.",
+    "usBoxTitle3": "",
+    "usBoxHeader3": "In-Person Support",
+    "usBoxDescription3": "We provide on-site assistance for material selection and build planning. We walk you through every decision from start to finish, so the entire process feels confident and stress-free.",
+    "designLine1": "Professional Design",
+    "designLine2": "From concept to detail, tailored for you",
+    "designLine3": "Every space deserves its own character and function",
+    "factory": {
+      "header": "Factory Direct, Quality Guaranteed",
+      "description": "Our factory operates with advanced equipment and strict quality control. Every cabinet is carefully crafted and individually inspected to meet the highest standards. Factory-direct means we control every step of production to match your exact needs."
+    }
+  },
+
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "collections": "Collections"
+  },
+
+  "about": {
+    "title": "About Us",
+    "description": "Winner Cabinets is dedicated to delivering high-quality cabinet solutions. Our team brings years of industry experience to ensure every project meets your expectations.",
+    "ceoDescription": "Eric brings over 20 years of business ownership and management experience. With more than a decade in the cabinet industry, he has a deep passion for woodworking and a strong commitment to every project. Known for his integrity and market insight, he personally oversees custom cabinetry for residential and commercial clients — including kitchen cabinets, bathroom vanities, closets, bookcases, TV walls, office millwork, reception desks, and more."
+  },
+
+  "cards": {
+    "cardA": {
+      "title": "Our Services",
+      "description": "We offer full-service custom cabinetry from design to installation. Whether you're renovating or building new, our team delivers tailored solutions for every space and style."
+    },
+    "cardB": {
+      "title": "Our Team",
+      "description": "Our team of experienced designers, craftsmen, and installers is dedicated to delivering outstanding cabinet solutions. We obsess over the details and hold every project to the highest standard of quality."
+    },
+    "cardC": {
+      "title": "Our Commitment",
+      "description": "We stand behind every project with hands-on support and a commitment to your satisfaction. From first consultation to final installation, we're with you every step of the way."
+    }
+  }
 }

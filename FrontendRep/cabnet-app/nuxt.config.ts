@@ -1,17 +1,17 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   app: {
     head: {
       title: 'Winner Cabinets',
       meta: [
-        { name: 'description', content: 'My awesome site' },
+        { name: 'description', content: 'Custom cabinets crafted with precision. Built to last. Winner Cabinets — Richmond, BC.' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       ],
       bodyAttrs: {
-        class: 'bg-white text-black',
+        class: 'bg-white text-gray-900',
       },
     },
   },
@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxt/scripts', '@nuxtjs/i18n', '@nuxt/fonts'],
   css: ['@/assets/css/main.css'],
   fonts: {
-    processCSSVariables: true
+    processCSSVariables: true,
   },
   i18n: {
     strategy: 'prefix',
@@ -36,7 +36,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      apiBaseUrl: ""
+      apiBaseUrl: '',
     },
   },
 })

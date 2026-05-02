@@ -1,0 +1,127 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "collections": "Collections",
+    "hours": "Hours & Location",
+    "measurement": "Measurement"
+  },
+
+  "index": {
+    "welcome": "Welcome to Winner Cabinets",
+    "tagline": "We don't just build cabinets — we craft spaces you'll love living in.",
+    "heroCta": "Find a Showroom",
+    "designLabel": "Professional Design",
+    "designHeadline1": "From concept to detail, tailored for you.",
+    "designHeadline2": "Every space deserves its own character and function.",
+    "strengthsLabel": "Our Strengths",
+    "strengthsHeadline": "Why Choose Winner Cabinets",
+    "strengthsDescription": "Quality should never come at the cost of trust. From material sourcing to transparent pricing, every choice we make is designed to give you peace of mind.",
+    "strengthsAboutCta": "About Us",
+    "usBoxHeader1": "Local Materials",
+    "usBoxDescription1": "We source materials locally whenever possible — familiar origins, reliable supply, and consistent quality that eliminates unnecessary shipping costs.",
+    "usBoxHeader2": "Quality × Transparent Pricing",
+    "usBoxDescription2": "We clearly list costs and specifications with no vague estimates, so you know exactly what every dollar gets you — durable, time-tested craftsmanship.",
+    "usBoxHeader3": "In-Person Support",
+    "usBoxDescription3": "We provide on-site assistance for material selection and build planning, walking you through every decision from start to finish.",
+    "servicesLabel": "What We Build",
+    "servicesHeadline": "Our Services",
+    "collectionsLabel": "Our Work",
+    "collectionsHeadline": "Our Collections",
+    "collectionsBody": "Explore our diverse range of cabinet collections, each designed to meet different styles and needs.",
+    "collectionsShop": "Go shopping"
+  },
+
+  "about": {
+    "title": "About Us",
+    "description": "Winner Cabinets is dedicated to delivering high-quality cabinet solutions. Our team brings years of industry experience to every project.",
+    "storyLabel": "Our Story",
+    "storyHeadline": "Built on a decade of craftsmanship",
+    "ceoName": "CEO Eric Chen",
+    "ceoDescription": "Eric brings over 20 years of business ownership and management experience. With more than a decade in the cabinet industry, he has a deep passion for woodworking and a strong commitment to every project. Known for his integrity and market insight, he personally oversees custom cabinetry for residential and commercial clients — including kitchen cabinets, bathroom vanities, closets, bookcases, TV walls, office millwork, reception desks, and more.",
+    "visionLabel": "Inside Winner Cabinets",
+    "visionTitle": "Our Vision",
+    "visionBody": "We see design as more than aesthetics — it's a way of living that elevates everyday moments. Our work focuses on simplicity, quality, and thoughtful details that last.",
+    "missionTitle": "Our Mission",
+    "missionBody1": "To craft cabinetry that balances timeless form with comfort and function. We prioritize sustainable choices, careful craftsmanship, and enduring materials so every piece feels as good as it looks.",
+    "missionBody2": "Contact us to learn more about our process and materials.",
+    "knowUsTitle": "Get to know us",
+    "knowUsBody": "From our carefully curated collections to our commitment to sustainability, every aspect of Winner Cabinets reflects our dedication to quality and design. We invite you to explore our offerings and discover how our cabinetry can enhance your living spaces."
+  },
+
+  "collections": {
+    "heroLabel": "Explore",
+    "heroTitle": "Our Collections",
+    "galleryLabel": "Our Work",
+    "galleryTitle": "Project Gallery",
+    "galleryBody": "A glimpse of the custom cabinet projects we've completed for our clients across the Lower Mainland.",
+    "galleryCta": "See all photos",
+    "productsLabel": "What We Build",
+    "productsTitle": "Our Products",
+    "productsBody": "From kitchen cabinetry to bathroom vanities, explore our range of custom-built collections.",
+    "viewCollection": "View Collection",
+    "kitchenTitle": "Kitchen Cabinetry",
+    "kitchenCategory": "Kitchens",
+    "kitchenDesc": "Custom-built kitchen cabinets designed for your layout, style, and workflow.",
+    "vanityTitle": "Bathroom Vanities",
+    "vanityCategory": "Bathrooms",
+    "vanityDesc": "Elegant vanity solutions that maximize space and elevate your bathroom.",
+    "closetTitle": "Closet Systems",
+    "closetCategory": "Storage",
+    "closetDesc": "Smart closet designs with full customization for any room size.",
+    "millworkTitle": "Custom Millwork",
+    "millworkCategory": "Specialty",
+    "millworkDesc": "Built-ins, entertainment units, and bespoke pieces for any space."
+  },
+
+  "hours": {
+    "heroLabel": "Our Location",
+    "heroTitle": "Hours & Location",
+    "showroomLabel": "Richmond Showroom",
+    "showroomName": "Winner Cabinets",
+    "addressLabel": "Address",
+    "address": "160 – 4551 No 3 Rd\nRichmond, BC V6X 2C3",
+    "phoneLabel": "Phone",
+    "mapCta": "Open in Maps",
+    "callCta": "Call Us",
+    "hoursLabel": "When to Visit",
+    "hoursTitle": "Store Hours",
+    "hoursBody": "We're open seven days a week so you can visit at your convenience. Our team is always on hand to help you find the perfect cabinet solution for your space.",
+    "faqLabel": "Frequently Asked Questions",
+    "faqTitle": "Common questions about our showroom.",
+    "today": "Today"
+  },
+
+  "measurement": {
+    "label": "Frequently Asked Questions",
+    "title": "Measurement Services — FAQ",
+    "heroBody": "Our professional measurement service sends a trained specialist to your home to take precise measurements, ensuring your cabinet order fits perfectly."
+  },
+
+  "footer": {
+    "tagline": "Crafted with precision.\nBuilt to last.",
+    "exploreLabel": "Explore",
+    "visitLabel": "Visit Us",
+    "visitBody": "Experience our cabinets in person at our Richmond showroom.",
+    "visitCta": "Find a Showroom",
+    "copyright": "© 2025 Winner Cabinets — All rights reserved",
+    "quality": "Quality built into every detail"
+  },
+
+  "cards": {
+    "cardA": {
+      "title": "Our Services",
+      "description": "We offer full-service custom cabinetry from design to installation. Whether you're renovating or building new, our team delivers tailored solutions for every space and style."
+    },
+    "cardB": {
+      "title": "Our Team",
+      "description": "Our team of experienced designers, craftsmen, and installers is dedicated to delivering outstanding cabinet solutions. We obsess over the details and hold every project to the highest standard of quality."
+    },
+    "cardC": {
+      "title": "Our Commitment",
+      "description": "We stand behind every project with hands-on support and a commitment to your satisfaction. From first consultation to final installation, we're with you every step of the way."
+    }
+  }
+}
