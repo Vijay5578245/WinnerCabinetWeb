@@ -1,47 +1,52 @@
 <template>
-  <div
-    class="w-full h-24 flex fixed top-0 z-50 flex justify-center items-center px-7 transition-all duration-350"
+  <header
+    class="fixed top-0 z-50 w-full h-24 px-7 transition-all duration-[350ms]"
     :class="[
-      hidden ? '-translate-y-full pointer-events-none delay-50' : 'translate-y-0 delay-0',
-      // background classes (depends on scroll)
+      hidden ? '-translate-y-full pointer-events-none delay-[50ms]' : 'translate-y-0 delay-0',
       scrolled
-        ? 'bg-white/70 backdrop-blur-lg border-black/200'
+        ? 'bg-white/70 backdrop-blur-lg border-b border-black/10'
         : 'bg-transparent backdrop-blur-none border-transparent',
-      // text color handled separately so we can force black on a specific page
       textClass,
     ]"
   >
-    <div class="flex items-center space-x-4 absolute left-1/2 -translate-x-1/2">
-      <nuxt-link to="/" class="text-lg font-bold"> Winner Cabinets </nuxt-link>
+    <div class="grid grid-cols-3 items-center h-full w-full">
+      <div></div>
 
-      <ul class="flex space-x-6 ml-6">
-        <li>
-          <NuxtLink to="/about">{{ $t("header.about") }}</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/collections">{{ $t("header.collections") }}</NuxtLink>
-        </li>
-      </ul>
-    </div>
+      <nav class="flex items-center justify-center gap-6 whitespace-nowrap">
+        <NuxtLink to="/" class="text-lg font-bold">
+          Winner Cabinets
+        </NuxtLink>
 
-    <div class="ml-auto shrink-0">
-      <NuxtLink
-        class="cursor-pointer px-4 py-2"
-        :class="locale === 'en' ? 'font-bold' : ''"
-        :to="switchLocalePath('en')"
-      >
-        English
-      </NuxtLink>
-      /
-      <NuxtLink
-        class="cursor-pointer px-4 py-2"
-        :class="locale === 'zh' ? 'font-bold' : ''"
-        :to="switchLocalePath('zh')"
-      >
-        中文
-      </NuxtLink>
+        <NuxtLink to="/about">
+          {{ $t("header.about") }}
+        </NuxtLink>
+
+        <NuxtLink to="/collections">
+          {{ $t("header.collections") }}
+        </NuxtLink>
+      </nav>
+
+      <div class="flex justify-end items-center whitespace-nowrap shrink-0">
+        <NuxtLink
+          class="cursor-pointer px-4 py-2"
+          :class="locale === 'en' ? 'font-bold' : ''"
+          :to="switchLocalePath('en')"
+        >
+          English
+        </NuxtLink>
+
+        <span>/</span>
+
+        <NuxtLink
+          class="cursor-pointer px-4 py-2"
+          :class="locale === 'zh' ? 'font-bold' : ''"
+          :to="switchLocalePath('zh')"
+        >
+          中文
+        </NuxtLink>
+      </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <script setup>
