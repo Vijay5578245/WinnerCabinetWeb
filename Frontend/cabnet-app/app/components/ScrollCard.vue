@@ -109,23 +109,7 @@
               </div>
             </Transition>
           </div>
-          <div class="mt-7 flex flex-wrap gap-3">
-            <span
-              class="rounded-full bg-gray-900 px-4 py-2 text-sm font-medium text-white"
-            >
-              Quality
-            </span>
-            <span
-              class="rounded-full bg-gray-100 px-4 py-2 text-sm font-medium text-gray-800"
-            >
-              Transparent pricing
-            </span>
-            <span
-              class="rounded-full bg-yellow-200/70 px-4 py-2 text-sm font-medium text-gray-900"
-            >
-              Local materials
-            </span>
-          </div>
+
         </div>
       </div>
     </div>

@@ -71,12 +71,7 @@
 
               <ScrollPic />
 
-        <!-- decorative color chips -->
-        <div class="relative flex items-center gap-2 mt-2">
-          <span class="inline-block w-3 h-3 rounded-full bg-amber-400"></span>
-          <span class="inline-block w-3 h-3 rounded-full bg-teal-400"></span>
-          <span class="inline-block w-3 h-3 rounded-full bg-rose-400"></span>
-        </div>
+
       </section>
 
       <section class="pt-10">
@@ -302,8 +297,8 @@
         </NuxtLink>
 
         <!-- Bold CTA panel (right) -->
-        <a
-          :href="localePath('collections')"
+        <NuxtLink
+          to="/hours-and-location"
           class="group block rounded-lg overflow-hidden shadow-md bg-yellow-400 flex items-center justify-center min-h-[550px] md:min-h-[670px]"
           aria-label="Go shopping - Find a showroom"
         >
@@ -320,7 +315,7 @@
               </span>
             </div>
           </div>
-        </a>
+        </NuxtLink>
       </section>
     </div>
   </main>

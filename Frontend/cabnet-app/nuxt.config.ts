@@ -41,4 +41,9 @@ export default defineNuxtConfig({
       { code: 'zh', iso: 'zh-CN', name: '中文', file: 'zh.json' },
     ],
   },
+  runtimeConfig: {
+    public: {
+      apiBaseUrl: ""
+    },
+  },
 })
