@@ -18,7 +18,7 @@
     <!-- Main content -->
     <section class="relative z-10 bg-white -mt-4 overflow-hidden" style="border-radius: 10px 10px 0 0;">
       <!-- Warm gradient background -->
-      <div class="absolute inset-0 bg-gradient-to-b from-amber-50 via-yellow-50/40 to-white pointer-events-none"></div>
+      <div class="absolute inset-0 bg-white pointer-events-none"></div>
 
       <div class="relative max-w-6xl mx-auto px-6 pt-16 pb-24">
 
@@ -101,9 +101,15 @@
               v-for="day in hours"
               :key="day.label"
               class="bg-white border border-gray-100 shadow-sm p-5"
-              :class="day.highlight ? 'border-yellow-200 bg-yellow-50/60' : ''"
+              :class="day.label === todayLabel
+                ? 'border-yellow-400 bg-yellow-50 ring-2 ring-yellow-300'
+                  : ''"
               style="border-radius: 10px;"
             >
+              <span
+                v-if="day.label === todayLabel"
+                class="inline-block text-[9px] font-bold tracking-widest uppercase text-yellow-600 bg-yellow-100 px-2 py-0.5 rounded-full mb-1"
+              >Today</span>
               <p class="text-[10px] font-bold tracking-[0.2em] uppercase text-gray-400 mb-2">{{ day.label }}</p>
               <p class="text-lg font-extrabold text-black leading-tight">{{ day.open }}</p>
               <p class="text-sm text-gray-400">– {{ day.close }}</p>
@@ -111,36 +117,34 @@
           </div>
         </div>
 
-        <!-- CTA banner -->
-        <div class="mt-20 bg-black overflow-hidden relative" style="border-radius: 10px;">
-          <div class="absolute inset-0 overflow-hidden">
-            <img
-              src="/images/storeTest.jpg"
-              alt=""
-              class="w-full h-full object-cover opacity-20"
-              loading="lazy"
-            />
+        <!-- FAQ section -->
+        <div class="mt-20">
+          <div class="flex items-center gap-3 mb-8">
+            <div class="h-px w-10 bg-yellow-400"></div>
+            <p class="text-yellow-400 text-xs font-bold tracking-[0.2em] uppercase">Frequently Asked Questions</p>
           </div>
-          <div class="relative z-10 px-10 py-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-            <div>
-              <p class="text-yellow-400 text-xs font-bold tracking-[0.2em] uppercase mb-3">Ready to visit?</p>
-              <h3 class="text-3xl md:text-4xl font-extrabold text-white leading-tight">
-                Come see our cabinets<br />in person.
-              </h3>
-              <p class="text-white/50 mt-3 max-w-md leading-relaxed">
-                Our showroom experts are here Monday through Sunday to help you design
-                the kitchen or bathroom of your dreams.
-              </p>
-            </div>
-            <a
-              :href="showroom.mapUrl"
-              target="_blank"
-              rel="noopener"
-              class="shrink-0 inline-flex items-center gap-2 bg-yellow-400 text-black font-bold px-8 py-4 text-sm whitespace-nowrap hover:bg-yellow-500 transition-colors"
+          <h2 class="text-3xl md:text-4xl font-extrabold text-black mb-10 leading-tight">
+            Common questions<br />about our showroom.
+          </h2>
+
+          <div class="space-y-4">
+            <div
+              v-for="(faq, i) in faqs"
+              :key="i"
+              class="border border-gray-100 shadow-sm overflow-hidden"
               style="border-radius: 10px;"
             >
-              Get Directions →
-            </a>
+              <button
+                class="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors"
+                @click="openFaq = openFaq === i ? null : i"
+              >
+                <span class="font-bold text-black text-sm pr-4">{{ faq.q }}</span>
+                <span class="shrink-0 text-yellow-400 text-lg font-bold">{{ openFaq === i ? '−' : '+' }}</span>
+              </button>
+              <div v-show="openFaq === i" class="px-6 pb-5 text-gray-500 text-sm leading-relaxed border-t border-gray-100 pt-4">
+                {{ faq.a }}
+              </div>
+            </div>
           </div>
         </div>
 
@@ -151,18 +155,43 @@
   </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const showroom = {
-  id: 'richmond',
   name: 'Richmond Showroom',
-  shortName: 'Richmond',
-  addressHtml: '160 – 4551 No 3 Rd, Richmond, BC V6X 2C3',
-  hours: { week: '10:00am - 7:00pm', sun: '11:00am - 6:00pm' },
   phone: '(604) 270-4505',
   image: '/images/storeTest.jpg',
-  visitRoute: '/hours-and-location',
   mapUrl: 'https://maps.app.goo.gl/S2YgNX3ayvWys7sQA',
 }
+
+const openFaq = ref<number | null>(null)
+
+const faqs = [
+  {
+    q: 'Do I need an appointment to visit the showroom?',
+    a: 'No appointment is needed — walk-ins are always welcome. Our showroom is open Monday through Saturday from 10:00 am to 7:00 pm, and Sunday from 11:00 am to 6:00 pm.',
+  },
+  {
+    q: 'Do you offer custom cabinet sizes and finishes?',
+    a: 'Yes. We carry a wide range of door styles, finishes, and hardware options. Our in-store consultants can help you mix and match to suit your kitchen or bathroom layout.',
+  },
+  {
+    q: 'Can I get a quote before purchasing?',
+    a: 'Absolutely. Bring in your measurements or ask about our professional measurement service, and we will prepare a detailed quote for you at no charge.',
+  },
+  {
+    q: 'Does Winner Cabinets offer installation services?',
+    a: 'We can connect you with trusted local installers who work with our products regularly. Ask a showroom consultant for details during your visit.',
+  },
+  {
+    q: 'What areas do you serve?',
+    a: 'Our Richmond showroom serves the Greater Vancouver area, including Richmond, Vancouver, Burnaby, Surrey, and surrounding municipalities.',
+  },
+]
+
+const todayLabel = new Date().toLocaleDateString('en-US', {
+  timeZone: 'America/Vancouver',
+  weekday: 'long',
+})
 
 const hours = [
   { label: 'Monday',    open: '10:00 am', close: '7:00 pm'  },
@@ -171,7 +200,7 @@ const hours = [
   { label: 'Thursday',  open: '10:00 am', close: '7:00 pm'  },
   { label: 'Friday',    open: '10:00 am', close: '7:00 pm'  },
   { label: 'Saturday',  open: '10:00 am', close: '7:00 pm'  },
-  { label: 'Sunday',    open: '11:00 am', close: '6:00 pm', highlight: true },
+  { label: 'Sunday',    open: '11:00 am', close: '6:00 pm'  },
 ]
 </script>
 
@@ -179,4 +208,5 @@ const hours = [
 main {
   border-radius: 10px;
 }
+
 </style>

@@ -17,7 +17,7 @@
 
     <!-- Page body -->
     <section class="relative z-10 bg-white -mt-4 overflow-hidden" style="border-radius: 10px 10px 0 0;">
-      <div class="absolute inset-0 bg-gradient-to-b from-amber-50 via-yellow-50/40 to-white pointer-events-none"></div>
+      <div class="absolute inset-0 bg-white pointer-events-none"></div>
 
       <div class="relative max-w-6xl mx-auto px-6 pt-16 pb-24">
 
