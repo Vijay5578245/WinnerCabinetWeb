@@ -1,6 +1,6 @@
 <template>
   <main class="bg-white min-h-screen">
-    <section class="max-w-4xl mx-auto px-6 py-20">
+    <section class="max-w-4xl mx-auto px-6 pt-32 pb-20">
       <div class="flex items-center gap-3 mb-8">
         <div class="h-px w-10 bg-yellow-400"></div>
         <p class="text-yellow-400 text-xs font-bold tracking-[0.2em] uppercase">Frequently Asked Questions</p>

@@ -1,7 +1,7 @@
 <template>
   <main>
     <!-- Hero -->
-    <section class="relative h-[55vh] overflow-hidden">
+    <section class="relative h-[55dvh] overflow-hidden">
       <img
         src="/images/storeTest.jpg"
         alt="Winner Cabinets Showroom"

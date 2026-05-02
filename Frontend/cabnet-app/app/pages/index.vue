@@ -1,7 +1,7 @@
 <template>
   <section
     ref="heroRef"
-    class="bg-white flex flex-col items-center justify-center h-[96vh] text-center px-6 w-full z-5 overflow-hidden relative"
+    class="bg-white flex flex-col items-center justify-center h-[96dvh] text-center px-6 w-full z-5 overflow-hidden relative"
   >
     <img
       src="/images/logbg2.png"
@@ -145,7 +145,7 @@
     <!-- the section for 4 blocks -->
 
     <section class="w-full bg-white text-black pt-20 border-t border-gray-300">
-      <div class="mx-auto max-w-[90vw] py-0">
+      <div class="mx-auto max-w-7xl py-0 px-6">
         <!-- Section header -->
         <div class="services-header mb-10">
           <p class="text-yellow-500 text-xs font-bold tracking-[0.2em] uppercase mb-3">What We Offer</p>
@@ -157,7 +157,7 @@
           <!-- LEFT COLUMN (stack) -->
           <div class="flex flex-col gap-18">
             <!-- Big card -->
-            <div class="service-card relative p-10 overflow-hidden h-[60vh] group">
+            <div class="service-card relative p-10 overflow-hidden h-[60dvh] group">
               <div class="absolute inset-0 z-0">
                 <img
                   src="/images/pencilPic.jpg"
@@ -180,7 +180,7 @@
             </div>
 
             <!-- Small card -->
-            <div class="service-card relative p-10 overflow-hidden h-[40vh] group">
+            <div class="service-card relative p-10 overflow-hidden h-[40dvh] group">
               <div class="absolute inset-0 z-0">
                 <img
                   src="/images/pencilPic.jpg"
@@ -205,7 +205,7 @@
           <!-- RIGHT COLUMN (stack) -->
           <div class="flex flex-col gap-18">
             <!-- Small card -->
-            <div class="service-card relative p-10 overflow-hidden h-[40vh] group">
+            <div class="service-card relative p-10 overflow-hidden h-[40dvh] group">
               <div class="absolute right-0 inset-y-0 z-0 w-full">
                 <img
                   src="/images/pencilPic.jpg"
@@ -228,7 +228,7 @@
             </div>
 
             <!-- Big card -->
-            <div class="service-card relative p-10 overflow-hidden h-[60vh] group">
+            <div class="service-card relative p-10 overflow-hidden h-[60dvh] group">
               <div class="absolute inset-y-0 right-0 z-0 w-full">
                 <img
                   src="/images/pencilPic.jpg"
@@ -260,7 +260,7 @@
 
     <div class="bg-white pt-20">
       <section
-        class="collections-section max-w-[95vw] mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch py-12"
+        class="collections-section max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch py-12"
       >
         <!-- Large image/content card (left) -->
         <NuxtLink
@@ -298,7 +298,7 @@
 
         <!-- Bold CTA panel (right) -->
         <NuxtLink
-          to="/hours-and-location"
+          to="/collections"
           class="group block rounded-lg overflow-hidden shadow-md bg-yellow-400 flex items-center justify-center min-h-[550px] md:min-h-[670px]"
           aria-label="Go shopping - Find a showroom"
         >
